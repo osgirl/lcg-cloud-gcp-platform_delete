@@ -1,0 +1,16 @@
+imports:
+  - path: network.jinja
+resources:
+- name: lcg-bi-prod
+  type: network.jinja
+  properties:
+    region: europe-west2
+    subnets:
+      - range: 10.105.28.0/23
+        name: bi-prod-web
+      - range: 10.105.24.0/22
+        name: bi-prod-app
+      - range: 10.105.30.0/24
+        name: bi-prod-db
+      - range: 10.105.31.0/24
+        name: bi-prod-infra

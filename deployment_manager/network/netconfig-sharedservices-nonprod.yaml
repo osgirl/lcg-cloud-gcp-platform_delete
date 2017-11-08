@@ -1,0 +1,16 @@
+imports:
+  - path: network.jinja
+resources:
+- name: lcg-sharedservices-nonprod
+  type: network.jinja
+  properties:
+    region: europe-west2
+    subnets:
+      - range: 10.105.84.0/23
+        name: sharedservices-nonprod-web
+      - range: 10.105.80.0/22
+        name: sharedservices-nonprod-app
+      - range: 10.105.86.0/24
+        name: sharedservices-nonprod-db
+      - range: 10.105.87.0/24
+        name: sharedservices-nonprod-infra

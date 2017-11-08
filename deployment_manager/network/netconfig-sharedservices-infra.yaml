@@ -1,0 +1,16 @@
+imports:
+  - path: network.jinja
+resources:
+- name: lcg-sharedservices-infra
+  type: network.jinja
+  properties:
+    region: europe-west2
+    subnets:
+      - range: 10.105.92.0/23
+        name: sharedservices-infra-web
+      - range: 10.105.88.0/22
+        name: sharedservices-infra-app
+      - range: 10.105.94.0/24
+        name: sharedservices-infra-db
+      - range: 10.105.95.0/24
+        name: sharedservices-infra-infra

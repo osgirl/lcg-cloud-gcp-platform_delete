@@ -1,0 +1,16 @@
+imports:
+  - path: network.jinja
+resources:
+- name: lcg-cloudservices-prod
+  type: network.jinja
+  properties:
+    region: europe-west2
+    subnets:
+      - range: 10.105.60.0/23
+        name: cloudservices-prod-web
+      - range: 10.105.56.0/22
+        name: cloudservices-prod-app
+      - range: 10.105.62.0/24
+        name: cloudservices-prod-db
+      - range: 10.105.63.0/24
+        name: cloudservices-prod-infra
